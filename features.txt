@@ -19,7 +19,7 @@ NEW drops added
 - endermite: 15% chance to drop ender_pearl
 - silverfish: chance to drop iron_nugget
 - vex: have a chance to drop phantom_membrane
-- illusioner: have a chance to drop phantom_membrane
+- illusioner: have a chance to drop phantom_membrane / emerald_block
 - wandering_trader: added chance to drop emeralds
 
 

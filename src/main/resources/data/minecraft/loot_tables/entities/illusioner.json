@@ -12,7 +12,22 @@
       "conditions": [
         {
           "condition": "minecraft:random_chance",
-          "chance": 0.95
+          "chance": 0.50
+        }
+      ]
+    },
+	{
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.50
         }
       ]
     }
