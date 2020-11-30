@@ -1,0 +1,31 @@
+COMPLETED features
+Entities:
+
+peaceful mobs changed to drop NOTHING:
+- parrot, dolphin, turtle, panda, horse, mule
+
+loot balance changes
+- shulker: fixed shell drop at exactly 2
+- zombie, husk: removed drops of iron, carrot, potato  
+- endermite: added chance to drop ender pearl
+- phantom & spider: removed killed_by_player condition, drops apply the same regardless 
+- wandering_trader: added chance to drop emeralds
+- slime: have a 5% chance of dropping slime block
+
+
+loot buffs - TODO: move some to looting only
+- creeper: increased gunpowder TODO: redo this
+- iron golem: RNG droping iron_blocks  TODO: redo this
+- snow golem: always 2 blocks of snow
+- llama: drops MORE leather 
+- pig: drops MORE meat
+
+NEW drops added
+- ender_dragon: has equal chance to drop either 0, 1, or 2 elytra
+- endermite: 15% chance to drop iron_nugget
+
+
+Blocks:
+- melon block never drops slices, always 1 block regardless of tool
+
+Blocks - working with silk touch? 
