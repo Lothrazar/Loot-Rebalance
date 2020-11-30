@@ -9,19 +9,20 @@ loot balance changes
 - phantom, spider: removed killed_by_player condition, drops apply the same regardless 
 
 
-RNG -> Fixed
+Luck removed: RNG drops changed to Fixed number of drops
 - shulker: fixed shell drop at exactly 2
 - snow_golem: always 2 blocks of snow
 - iron_golem: 4 iron_blocks drop instead of ingots (flowers unchanged)
 
 
 NEW drops added
+- wandering_trader: Can drop from 0-3 emeralds (more with looting)
 - ender_dragon: has equal chance to drop either 0, 1, or 2 elytra
 - endermite: 15% chance to drop ender_pearl
-- silverfish: chance to drop iron_nugget
-- vex: have a chance to drop phantom_membrane
-- illusioner: have a chance to drop phantom_membrane / emerald_block
-- wandering_trader: added chance to drop emeralds
+- silverfish: 15% chance to drop iron_nugget
+- vex: 50% chance to drop phantom_membrane
+- illusioner: 50% chance to drop phantom_membrane and/or emerald_block; and 5% to drop enchanted_golden_apple
+- wither: 25% to drop enchanted_golden_apple
 
 
 Blocks:

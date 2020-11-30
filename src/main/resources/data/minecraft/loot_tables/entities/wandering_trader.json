@@ -18,8 +18,8 @@
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 3.0
+                "min": 1.0,
+                "max": 9.0
               }
             }
           ],
