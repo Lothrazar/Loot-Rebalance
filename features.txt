@@ -12,6 +12,7 @@ loot balance changes
 RNG -> Fixed
 - shulker: fixed shell drop at exactly 2
 - snow_golem: always 2 blocks of snow
+- iron_golem: 4 iron_blocks drop instead of ingots (flowers unchanged)
 
 
 NEW drops added
