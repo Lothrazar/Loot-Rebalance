@@ -18,7 +18,7 @@ Peaceful Entities: the following mods have had all drops removed
 - panda
 - polar_bear
 - parrot
-- turtle 
+- turtle
 
 Luck removed: RNG drops changed to Fixed number of drops
 - shulker : fixed shell drop at exactly 2
@@ -34,20 +34,22 @@ Removed "killed_by_player" condition, so there are no player-kill-only drops; th
 
 Balance changes: drops removed
 - zombie, zombie_villager, husk: removed drops of iron, carrot, potato  
-- witch: remove drops of glowstone, redstone, stick
+- witch: remove drops of glowstone, redstone, stick 
+- elder_guardian: removed drops of cod, prismarine_shard
 
 
 NEW drops added
 - wandering_trader: Can drop from 0-3 emeralds (more with looting)
-- ender_dragon: has equal chance to drop either 0, 1, or 2 elytra
+- ender_dragon: 50% chance to drop  elytra
 - endermite: 15% chance to drop ender_pearl
-- silverfish: 15% chance to drop iron_nugget
-- ghast: 15% chance to drop phantom_membrane (in addition to other drops)
-- vex: 50% chance to drop phantom_membrane
+- vex: 15% chance to drop phantom_membrane
 - illusioner: 50% chance to drop phantom_membrane and/or emerald_block; and 5% to drop enchanted_golden_apple
 - wither: 25% to drop enchanted_golden_apple
-- elder_guardian: ???
-- evoker: ?? has some but add more 
+- elder_guardian: Increased existing drops from "fishing loot table".  Increased drop of wet_sponge's. 
 
+NEW drops added category
+- looting changes 
 
 Blocks - working with silk touch? 
+
+
