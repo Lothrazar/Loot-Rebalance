@@ -1,18 +1,40 @@
 COMPLETED features
-Entities:
 
-peaceful mobs changed to drop NOTHING:
-- parrot, dolphin, turtle, panda, horse, mule
 
-loot balance changes
-- zombie, husk: removed drops of iron, carrot, potato  
-- phantom, spider: removed killed_by_player condition, drops apply the same regardless 
+Player interactions:
 
+- Players shearing a sheep are given randomly between [1-9] bonus wool
+
+
+Blocks:
+
+- Melon block never drops slices, always 1 block regardless of tool
+
+Peaceful Entities: the following mods have had all drops removed
+- dolphin
+- donkey
+- horse
+- mule
+- panda
+- polar_bear
+- parrot
+- turtle 
 
 Luck removed: RNG drops changed to Fixed number of drops
-- shulker: fixed shell drop at exactly 2
-- snow_golem: always 2 blocks of snow
-- iron_golem: 4 iron_blocks drop instead of ingots (flowers unchanged)
+- shulker : fixed shell drop at exactly 2
+- snow_golem : always 2 blocks of snow
+- iron_golem : 4 iron_blocks drop instead of ingots (flowers unchanged)
+
+Removed "killed_by_player" condition, so there are no player-kill-only drops; the rest of the loot is unchanged
+- phantom
+- spider
+- cave_spider
+- blaze
+
+
+Balance changes: drops removed
+- zombie, zombie_villager, husk: removed drops of iron, carrot, potato  
+- witch: remove drops of glowstone, redstone, stick
 
 
 NEW drops added
@@ -20,12 +42,12 @@ NEW drops added
 - ender_dragon: has equal chance to drop either 0, 1, or 2 elytra
 - endermite: 15% chance to drop ender_pearl
 - silverfish: 15% chance to drop iron_nugget
+- ghast: 15% chance to drop phantom_membrane (in addition to other drops)
 - vex: 50% chance to drop phantom_membrane
 - illusioner: 50% chance to drop phantom_membrane and/or emerald_block; and 5% to drop enchanted_golden_apple
 - wither: 25% to drop enchanted_golden_apple
+- elder_guardian: ???
+- evoker: ?? has some but add more 
 
-
-Blocks:
-- melon block never drops slices, always 1 block regardless of tool
 
 Blocks - working with silk touch? 
