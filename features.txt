@@ -45,7 +45,7 @@ NEW drops added
 - vex: 15% chance to drop phantom_membrane
 - illusioner: 50% chance to drop phantom_membrane and/or emerald_block; and 5% to drop enchanted_golden_apple
 - wither: 25% to drop enchanted_golden_apple
-- elder_guardian: Increased existing drops from "fishing loot table".  Increased drop of wet_sponge's. 
+- elder_guardian: Increased existing drops from "fishing loot table".  Increased drop of wet_sponge' s. 
 
 NEW drops added category
 - looting changes 
