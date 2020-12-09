@@ -18,7 +18,7 @@ modId="lootrebalance" #mandatory
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
  
-displayName="lootrebalance"#mandatory
+displayName="Loot Rebalance"#mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 updateJSONURL="https://raw.githubusercontent.com/Lothrazar/LootRebalance/trunk/1.16/update.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI # replace cyclic with your website
@@ -33,7 +33,7 @@ authors="Lothrazar" #optional
 # The description text for the mod (multi line!) (#mandatory)
 
 description='''
-lootrebalance by Lothrazar
+Rebalance loot by removing randomness, adding rewards and reducing some crufty pointless drops
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.lootrebalance]] #optional

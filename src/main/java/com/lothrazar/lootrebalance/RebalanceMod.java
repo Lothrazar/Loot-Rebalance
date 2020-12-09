@@ -7,13 +7,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(ExampleMod.MODID)
-public class ExampleMod {
+@Mod(RebalanceMod.MODID)
+public class RebalanceMod {
 
   public static final String MODID = "lootrebalance";
   public static final Logger LOGGER = LogManager.getLogger();
 
-  public ExampleMod() {
+  public RebalanceMod() {
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
   }
 

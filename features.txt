@@ -1,4 +1,5 @@
-COMPLETED features
+
+Current Features
 
 
 Player interactions:
@@ -47,8 +48,8 @@ NEW drops added
 - wither: 25% to drop enchanted_golden_apple
 - elder_guardian: Increased existing drops from "fishing loot table".  Increased drop of wet_sponge' s. 
 
-NEW drops added category
-- looting changes 
+
+Future state: 
 
 Blocks - working with silk touch? 
 
