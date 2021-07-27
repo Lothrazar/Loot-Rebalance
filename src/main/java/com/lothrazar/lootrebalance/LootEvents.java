@@ -3,16 +3,19 @@ package com.lothrazar.lootrebalance;
 import java.util.Map;
 import java.util.Random;
 import com.google.common.collect.Maps;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.passive.SheepEntity;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.Util;
-import net.minecraft.world.World;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.Util;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract;
 import net.minecraftforge.eventbus.api.Event.Result;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -22,7 +25,7 @@ public class LootEvents {
 
   //LOL why would they make this private, its already final who cares 
   //copied from net.minecraft.entity.passive.SheepEntity
-  private static final Map<DyeColor, IItemProvider> WOOL_BY_COLOR = Util.make(Maps.newEnumMap(DyeColor.class), (p_203402_0_) -> {
+  private static final Map<DyeColor, ItemLike> ITEM_BY_DYE = Util.make(Maps.newEnumMap(DyeColor.class), (p_203402_0_) -> {
     p_203402_0_.put(DyeColor.WHITE, Blocks.WHITE_WOOL);
     p_203402_0_.put(DyeColor.ORANGE, Blocks.ORANGE_WOOL);
     p_203402_0_.put(DyeColor.MAGENTA, Blocks.MAGENTA_WOOL);
@@ -40,29 +43,29 @@ public class LootEvents {
     p_203402_0_.put(DyeColor.RED, Blocks.RED_WOOL);
     p_203402_0_.put(DyeColor.BLACK, Blocks.BLACK_WOOL);
   });
-  final int MINWOOL_BONUS = 1;
-  final int MAXWOOL_BONUS = 8;
+  static final int MINWOOL_BONUS = 1;
+  static final int MAXWOOL_BONUS = 8;
+
+  public static final Tags.IOptionalNamedTag<Item> SHEARS = ItemTags.createOptional(new ResourceLocation("forge", "shears"));
 
   @SubscribeEvent(priority = EventPriority.LOWEST)
   public void onEntityInteract(EntityInteract event) {
     event.setResult(Result.DEFAULT);
-    //TODO: well, there is no tool type, or item data tag for SHEARS so i am stuck
-    World world = event.getWorld();
+    Level world = event.getWorld();
     Entity target = event.getTarget();
-    if (!world.isRemote &&
-        target instanceof SheepEntity &&
+    if (!world.isClientSide &&
+        target instanceof Sheep &&
         target.isAlive() &&
-        event.getPlayer().getHeldItem(event.getHand()).getItem() == Items.SHEARS) {
-      SheepEntity sheep = (SheepEntity) target;
-      if (sheep.isShearable() == false) {
-        return;//cant
+        event.getPlayer().getItemInHand(event.getHand()).is(SHEARS)) {
+      Sheep sheep = (Sheep) target;
+      if (sheep.readyForShearing() == false) {
+        return;
       }
-      int stack = MINWOOL_BONUS + world.rand.nextInt(MAXWOOL_BONUS);
-      ItemStack drop = new ItemStack(WOOL_BY_COLOR.get(sheep.getFleeceColor()), stack);
-      System.out.println("sheep drop " + drop);
-      ItemEntity ent = target.entityDropItem(drop, 1.0F);
-      Random rand = world.rand;
-      ent.setMotion(ent.getMotion().add((rand.nextFloat() - rand.nextFloat()) * 0.1F, rand.nextFloat() * 0.05F, (rand.nextFloat() - rand.nextFloat()) * 0.1F));
+      int stack = MINWOOL_BONUS + world.random.nextInt(MAXWOOL_BONUS);
+      ItemStack drop = new ItemStack(ITEM_BY_DYE.get(sheep.getColor()), stack);
+      ItemEntity ent = target.spawnAtLocation(drop, 1.0F);
+      Random rand = world.random;
+      ent.setDeltaMovement(ent.getDeltaMovement().add((rand.nextFloat() - rand.nextFloat()) * 0.1F, rand.nextFloat() * 0.05F, (rand.nextFloat() - rand.nextFloat()) * 0.1F));
     }
   }
 }
